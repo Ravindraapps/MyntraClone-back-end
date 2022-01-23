@@ -82,7 +82,7 @@ let displayProduct = (data) => {
     image.src = product.images.image1;
     image.addEventListener("click", function () {
       localStorage.setItem("preview_Data", JSON.stringify(product));
-      window.location.href = "previewPage.html";
+      window.location.href = "http://localhost:3780/mensproducts/previewpages";
     });
 
     let rating = document.createElement("p");

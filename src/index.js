@@ -10,6 +10,7 @@ const greetingController = require("./crudop/greetings.controller");
 const wishlistsController = require("./crudop/wishlist.controller");
 const addressController = require("./crudop/address.controller");
 const paymentController = require("./crudop/payment.controller");
+const previepagesController = require("./crudop/previewpages.controller");
 
 
 const app = express();
@@ -27,6 +28,8 @@ app.use("/greetings", greetingController);
 app.use("/wishlists", wishlistsController);
 app.use("/address", addressController);
 app.use("/payment", paymentController);
+app.use("/mensproducts/previewpages", previepagesController);
+app.use("/Womensproducts/previepages", previepagesController);
 
 
 module.exports = app;
