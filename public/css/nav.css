@@ -14,10 +14,6 @@
   margin-top: 20%;
   margin-left: 15%;
 }
-a{
-  color: black;
-  text-decoration: none !important;
-}
 .menCat {
   margin-top: 2%;
   margin-left: 3%;
@@ -54,7 +50,7 @@ a{
 #profile {
   /* border: 1px solid red; */
   margin-left: 100%;
-  margin-top: 50%;
+  margin-top: 70%;
   line-height: 2px;
 }
 .prof {
@@ -322,21 +318,3 @@ ul > li {
   height: 25px;
   font-weight: bold;
 }
-
-/* @media screen and (max-width:400px){
-  body{
-    background-color: green;
-  }
-}
-
-@media screen and (min-width:401px) and (max-width:700px){
-  body{
-    background-color: red;
-  }
-}
-
-@media screen and (min-width:701px) and (max-width:1400px){
-  body{
-    background-color: brown;
-  }
-} */

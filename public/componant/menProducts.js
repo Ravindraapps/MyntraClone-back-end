@@ -11,6 +11,43 @@ async function mensProduct() {
 }
 mensProduct();
 
+async function mensProduct_brand(brand) {
+  try {
+    let x = await fetch(
+      `http://localhost:3780/mensproducts/mensproductapi/${brand}`
+    );
+    data = await x.json();
+    console.log(data);
+    displayProduct(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+async function mensProduct_color(color) {
+  try {
+    let x = await fetch(
+      `http://localhost:3780/mensproducts/mensproductapi/${color}`
+    );
+    data = await x.json();
+    console.log(data);
+    displayProduct(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+async function mensProduct_sort(sort) {
+  try {
+    let x = await fetch(
+      `http://localhost:3780/mensproducts/mensproductapi/${sort}`
+    );
+    data = await x.json();
+    console.log(data);
+    displayProduct(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 let products = document.getElementById("products");
 let wishlist_data = JSON.parse(localStorage.getItem("wishlist_data")) || [];
 let displayProduct = (data) => {
@@ -157,6 +194,7 @@ prsort.onchange = function () {
 
 let roadster = document.getElementById("roadster");
 let mast = document.getElementById("mast");
+let hrx = document.getElementById("hrx");
 let hm = document.getElementById("hm");
 let clovia = document.getElementById("clovia");
 let kalini = document.getElementById("kalini");
@@ -179,128 +217,52 @@ $(".checkk1").click(function () {
 });
 
 let onData = () => {
-  let filtered_data = [];
+  // let filtered_data = [];
 
   if (roadster.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "Roadster") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_brand("Roadster");
   }
   if (mast.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "Mast & Harbour") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_brand("Mast & Harbour");
   }
   if (hm.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "H&M") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_brand("H&M");
   }
   if (clovia.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "Clovia") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_brand("Clovia");
   }
   if (kalini.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "KALINI") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_brand("KALINI");
   }
   if (dressberry.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "Dressberry") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_brand("Dressberry");
   }
   if (celfie.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "Celfie Design") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_brand("Celfie Design");
   }
   if (hrx.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "HRX") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_brand("HRX");
   }
   if (black.checked == true) {
-    console.log("Hrx");
-    data.forEach(function (data) {
-      if (data.color === "black") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_color("black");
   }
   if (navy.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "navyblue") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_color("navy");
   }
   if (green.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "green") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_color("green");
   }
   if (white.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "white") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_color("white");
   }
   if (pink.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "pink") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_color("pink");
   }
   if (blue.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "blue") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_color("blue");
   }
   if (yellow.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "yellow") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    mensProduct_color("yellow");
   }
 };
 document

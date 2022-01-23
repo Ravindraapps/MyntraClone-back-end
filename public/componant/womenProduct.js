@@ -13,6 +13,43 @@ async function womensProduct() {
 }
 womensProduct();
 
+async function womensProduct_brand(brand) {
+  try {
+    let x = await fetch(
+      `http://localhost:3780/Womensproducts/womenproducstapi/${brand}`
+    );
+    data = await x.json();
+    console.log(data);
+    displayProduct(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+async function womensProduct_color(color) {
+  try {
+    let x = await fetch(
+      `http://localhost:3780/Womensproducts/womenproducstapi/${color}`
+    );
+    data = await x.json();
+    console.log(data);
+    displayProduct(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+async function womensProduct_sort(sort) {
+  try {
+    let x = await fetch(
+      `http://localhost:3780/Womensproducts/womenproducstapi/${sort}`
+    );
+    data = await x.json();
+    console.log(data);
+    displayProduct(data);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
 // let data = womenData();
 // console.log(data);
 
@@ -184,128 +221,52 @@ $(".checkk1").click(function () {
 });
 
 let onData = () => {
-  let filtered_data = [];
+  // let filtered_data = [];
 
   if (roadster.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "Roadster") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_brand("Roadster");
   }
   if (mast.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "Mast & Harbour") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_brand("Mast & Harbour");
   }
   if (hm.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "H&M") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_brand("H&M");
   }
   if (clovia.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "Clovia") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_brand("Clovia");
   }
   if (kalini.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "KALINI") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_brand("KALINI");
   }
   if (dressberry.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "Dressberry") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_brand("Dressberry");
   }
   if (celfie.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "Celfie Design") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_brand("Celfie Design");
   }
   if (hrx.checked == true) {
-    data.forEach(function (data) {
-      if (data.brand === "HRX") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_brand("HRX");
   }
   if (black.checked == true) {
-    console.log("Hrx");
-    data.forEach(function (data) {
-      if (data.color === "black") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_color("black");
   }
   if (navy.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "navyblue") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_color("navy");
   }
   if (green.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "green") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_color("green");
   }
   if (white.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "white") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_color("white");
   }
   if (pink.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "pink") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_color("pink");
   }
   if (blue.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "blue") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_color("blue");
   }
   if (yellow.checked == true) {
-    data.forEach(function (data) {
-      if (data.color === "yellow") {
-        filtered_data.push(data);
-      }
-    });
-    displayProduct(filtered_data);
+    womensProduct_color("yellow");
   }
 };
 document

@@ -66,10 +66,10 @@ document.getElementById("header").innerHTML = navbar();
     }
     document.getElementById("Studio").addEventListener("mouseleave",removeStudio);
 
-    // let goToSignup = ()=>{
-    //     window.location.href = "verify.html";
-    // }
-    // document.getElementById("userProf").addEventListener("click",goToSignup);
+    let goToSignup = ()=>{
+        window.location.href = "verify.html";
+    }
+    document.getElementById("userProf").addEventListener("click",goToSignup);
 
     let goToCart = ()=>{
         window.location.href = "bag.html"
@@ -84,7 +84,7 @@ document.getElementById("header").innerHTML = navbar();
 
     
     let goToMenCategory = (req,res)=>{
-        window.location.href = "menProduct.html"
+        window.location.href = "menProduct.ejs"
         // $("menProduct").load("//menproducts")
     }
 

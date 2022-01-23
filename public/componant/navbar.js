@@ -438,8 +438,8 @@ function navbar () {
     return `<div class="logo" >
     <img id="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS357fHYAnvyZIqrnolaRs3MlCQO7PyKngEag&usqp=CAU" alt="">
 </div>
-<div id="menCat" class="menCat"><a href="/mensproducts">MEN</a></div>
-<div id="womenCat" class="menCat"><a href="/Womensproducts">WOMEN</a></div>
+<div href="menProduct.html" id="menCat" class="menCat">MEN</div>
+<div href="womenProduct.html" id="womenCat" class="menCat">WOMEN</div>
 <div id="kidCat" class="menCat">KIDS</div>
 <div id="homeCat" class="menCat">HOME & LIVING</div>
 <div id="beautyCat" class="menCat">BEAUTY</div>
@@ -450,15 +450,15 @@ function navbar () {
 </div>
 <div id="userProf">
     <i id="profile" class="far fa-user fa-2x"></i>
-    <p id="profileU" class="prof"><a href="/signup">PROFILE</a></p>
+    <p id="profileU" class="prof">Profile</p>
 </div>
 <div>
-    <i id="wishList" class="far fa-heart fa-2x"></i>
-    <p class="wish"><a href="/wishlists">Wishlist</a></p>
+    <i href="wishlist.html" id="wishList" class="far fa-heart fa-2x"></i>
+    <p class="wish">Wishlist</p>
 </div>
 <div>
-    <i id="cartBag" class="fas fa-shopping-bag fa-2x"></i>
-    <p class="bag"><a href="/bags">Bag</a></p>
+    <i href="bag.html" id="cartBag" class="fas fa-shopping-bag fa-2x"></i>
+    <p class="bag">Bag</p>
 </div>`;
 }
 
